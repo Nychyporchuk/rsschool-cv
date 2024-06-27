@@ -19,3 +19,20 @@ With years of experience in various fields, I have honed my interpersonal skills
 - JavaScript (Basic)
 - Gulp
 - Git
+
+## Code Example 
+from codewars
+
+```javascript
+class Solution {
+  static main(...args) {
+    console.log("Hello, World!");
+  }
+}
+
+Solution.main();
+```
+## Experience
+
+## English
+My English is at an A2 level, but I am actively working on improving it
