@@ -1,3 +1,240 @@
-*{
-    margin: 0 auto;
+* {
+
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Prata";
+        font-weight: normal;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgba(251, 242, 228, 0.50);
+    font-family: "Prata", sans-serif;
+
+}
+.container {
+    max-width: 1440px;
+    padding: 0 15px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    color:  #242424;
+    background-color: #CC996BD5;
+    margin-bottom: 25px;
+
+
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0 20px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #242424;
+    overflow: hidden;
+    transition: color 0.6s ease;
+}
+.nav-link:hover {
+    color: #CA6D18;
+}
+
+.contacts-item  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #CA6D18;
+    transform: scaleX(0);
+    transition: transform 0.7s ease;
+    transform-origin: bottom right;
+}
+
+.contacts-item  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.contacts-item .nav-link {
+    padding: 0 10px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #CA6D18;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+.avatar {
+display: flex;
+justify-content: center;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+}
+
+.circle-image {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title {
+    padding: 0 0 0 30px;
+}
+.title h1 {
+
+    font-size: 48px;
+    margin-bottom: 25px;
+    color:  #242424;
+
+}
+.title h3 {
+color: #CA6D18;
+    font-style: italic;
+}
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+}
+.about-me-items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+      border-bottom:  2px solid #CA6D18;
+    padding: 15px;
+
+}
+.about-me-items h2 {
+    margin-bottom: 25px;
+    color: #CA6D18;
+}
+.contacts-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.courses {
+    margin-top: 15px;
+    color: #CA6D18;
+}
+.courses a {
+    text-decoration: none;
+}
+.contacts-item span {
+    margin: 0 15px;
+}
+#skills .about-me-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.skill-img{
+    display: inline-block;
+
+    overflow: hidden;
+    width:50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.skill img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+code {
+    font-family: Consolas, "Courier New", monospace;
+}
+.footer {
+    background-color: #CC996BD5;
+    display: flex;
+    justify-content: center;
+}
+.footer .container {
+
+        display: flex;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.github {
+    display: flex;
+    align-items: center;
+
+}
+.github svg {
+    margin-right: 15px;
+}
+.logo {
+    width: 60px;
+    height: 40px;
+    margin-top: 15px;
+}
+.footer-link {
+    color:  #242424;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .about-me {
+        grid-template-columns:  1fr;
+    }
+    .about-me-items {
+        font-size: 12px;
+    }
+    .title h1 {
+        font-size: 36px;}
 }
